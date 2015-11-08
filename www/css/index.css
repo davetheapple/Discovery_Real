@@ -86,6 +86,7 @@ body {
     font-size: 20pt;
     font-family: "Quicksand", Helvetica, Arial;
 	background: #313131;
+	border: none;
 	border-top: solid thin white;
 	color: white;
 	opacity: .95;
