@@ -16,6 +16,8 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,300,700);
+
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
@@ -25,7 +27,8 @@ body {
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
     background-color:#E4E4E4;
-
+    background: url('../img/bg1_opt.gif') fixed no-repeat;
+    background-size: cover;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:12pt;
     height:100%;
@@ -49,8 +52,107 @@ body {
 }
 
 .topbar {
-    height: 10em;
     background: black;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.section {
+	position: relative;
+	width: 100%;
+	background: rgba(255,252,252,0.8);
+	overflow-x: hidden;
+	padding-top: 11em;
+}
+
+#logo { width: 15em; margin: .5em auto;}
+
+#search {
+    position: relative;
+    z-index: 0;
+    width: auto;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#search_query {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 20pt;
+    font-family: "Quicksand", Helvetica, Arial;
+	background: #313131;
+	border-top: solid thin white;
+	color: white;
+	opacity: .95;
+    padding: .5em;
+
+}
+
+
+.msg, .result {
+	position: relative;
+	width: 100%;
+	background: #43718d;
+	color: white;
+	padding: 1em;
+	margin: 0;
+	text-shadow: 0 0 3px #212121;
+	overflow: hidden;
+	border-bottom: solid thin white;
+}
+
+.result {
+	position: relative;
+	background: #4e5a65;
+	opacity: .85;
+	text-align: left;
+	height: 5em;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position-y: -50px;
+	font-size: 12pt;
+	text-shadow: 0 0 3px #212121;
+	transition: top ease;
+	-webkit-transition: top ease;
+}
+
+.result:hover {
+	box-shadow: 0 0 0 #716f6f;
+	cursor: pointer;
+}
+
+.result > h2 {
+	width: 100%;
+	display: block;
+	clear: both;
+	margin: 0;
+	padding: 0;
+}
+
+.result > p {
+	font-size: 11pt;
+}
+
+#loading {
+	height: .5em;
+	background: #ff4e6c;
+	margin: 0 auto;
+	width: 95%;
+	overflow: hidden;
+}
+
+#bar {
+	height: .5em;
+	width: .2em;
+	background: white;
+	opacity: .7;
+	margin-left: -1%;
 }
 
 
