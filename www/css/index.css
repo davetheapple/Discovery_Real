@@ -27,7 +27,7 @@ body {
     background-color:#E4E4E4;
 
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:12px;
+    font-size:12pt;
     height:100%;
     margin:0px;
     padding:0px;
@@ -36,23 +36,20 @@ body {
 
 /* Portrait layout (default) */
 .app {
-    /*
-   
-      */                             /* offset horizontal: half of text area width */
+    width: 100%;
+    height: 100%;
+
 }
 
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
     .app {
-        background-position:left center;
-        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
-        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
-                                      /* offset horizontal: half of image width and text area width */
+
     }
 }
 
 .topbar {
-    height: 5em;
+    height: 10em;
     background: black;
 }
 

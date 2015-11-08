@@ -45,7 +45,7 @@ $(document).ready(function() {
     $(".topbar").on("click", function(){
         console.log(($(this).height() == "25em" ? "8em" : "25em"));
         console.log($(this).height());
-        $(this).animate({height: ($(this).height() == 300 ? "8em" : "25em")}, 1000, function(){
+        $(this).animate({height: ($(this).height() >= 300 ? "8em" : "25em")}, 1000, function(){
             var obj = $("<div style='opacity: 0; background: red; color: white;'><h2 style='margin: 0; padding: 0;'>Discovery</h2><h5 style='margin: 0; padding: 0;'>The Music Finder</h5></div>");
             $(this).append(obj);
             obj.animate({opacity: 1}, 1000);
